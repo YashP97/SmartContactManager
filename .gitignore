@@ -1,0 +1,9 @@
+#ignoring following files and directories from commiting to git
+
+HELP.md
+target/
+.settings/
+.classpath
+.project
+
+

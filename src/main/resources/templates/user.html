@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th = "http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Hello User</title>
+<link rel="stylesheet" th:href="@{/style/style.css}">
+</head>
+<body class="userBody">
+    <div class="usernavbar">
+        <p class="cont P">Smart Contact Manager</p>
+        <p class="cont h4">Name</p>                
+    </div>
+    <div class="usernew">
+        <p class="newp">+ New</p>
+    </div>
+    <div class="usercontainer">
+    	<table id="usertable" class="usercontainertable">
+    		<thead class="usercontainertablethead">
+    			<tr class="usercontainertabletr">
+    				<td class="usercontainertabletd">Name</td>
+    				<td class="usercontainertabletd">Occupation</td>
+    				<td class="usercontainertabletd">Address</td>
+    				<td class="usercontainertabletd">Mobile Number</td>
+    			</tr>    		
+    		</thead>
+    		<tbody class="usercontainertabletbody">
+    			<tr th:each="contact : ${contacts}" class="usercontainertabletr usercontainertabletbodytr">
+    				<td th:text="${contact.name}" class="usercontainertabletd usercontainertabletbodytd">Name</td>
+    				<td th:text="${contact.occupation}" class="usercontainertabletd usercontainertabletbodytd">Occupation</td>
+    				<td th:text="${contact.address}" class="usercontainertabletd usercontainertabletbodytd">Address</td>
+    				<td th:text="${contact.mobile}" class="usercontainertabletd usercontainertabletbodytd">Mobile Number</td>    				
+    			</tr>
+    		</tbody>
+    	</table>
+    </div>
+    <div class="usernewdiv">
+        <div class="usernewdivclose">X</div>
+        <div class="usernewdivheading">
+        	<h1>Create User</h1>
+        </div>
+        <div class="usernewdivform">
+        	<form id="usernewdivformform" th:action="@{/contacts}" method="post" th:object="${contact}">
+        		<label for="usernewdivformformname" class="usernewdivformlabel">Name : </label>
+        		<input id="usernewdivformformname" type="text" name="name" th:value="${name}" class="usernewdivforminput">
+        		<label for="usernewdivformformcountry" class="usernewdivformlabel">Occupation : </label>
+        		<input id="usernewdivformformcountry" type="text" name="occupation" th:value="${occupation}" class="usernewdivforminput">
+        		<label for="usernewdivformformmobile" class="usernewdivformlabel">Mobile : </label>
+        		<input id="usernewdivformformmobile" type="text" name="mobile"  th:value="${mobile}" class="usernewdivforminput">
+        		<label for="usernewdivformformaddr" class="usernewdivformlabel">Address : </label>
+        		<input id="usernewdivformformaddr" type="text" name="address" th:value="${address}" class="usernewdivforminput">
+        		
+        		<button type="submit" class="usernewdivformbutton">Add User</button> 
+        	</form>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="/scripts/user.js"></script>
+</body>
+</html>

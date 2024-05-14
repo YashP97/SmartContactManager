@@ -1,0 +1,63 @@
+package com.smartcontactmanager.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.smartcontactmanager.entities.Contacts;
+import com.smartcontactmanager.entities.Users;
+import com.smartcontactmanager.repository.UsersRepository;
+import com.smartcontactmanager.services.ContactsServices;
+
+@Controller
+@RequestMapping("/contacts")
+public class ContactsController {
+
+	private ContactsServices contactsser;
+	private  UsersRepository usersrepo;
+	private long user_id;
+
+	@Autowired
+	public ContactsController(ContactsServices contactsser,  UsersRepository usersrepo) {
+		this.contactsser = contactsser;
+		this.usersrepo = usersrepo;
+	}
+
+	public long getUser_id() {
+		return user_id;
+	}
+
+	public void setUser_id(long user_id) {
+		this.user_id = user_id;
+	}
+	
+	@ModelAttribute("contact")
+	public Contacts newContact() {
+		return new Contacts();
+	}
+
+	@GetMapping("/{id}")
+	public String getUserPage(Model model) {
+		long idd = getUser_id();
+		List<Contacts> useren = contactsser.getContactsbyUserId(idd);
+		model.addAttribute("contacts", useren);		
+		return "user";
+	}
+	
+	@PostMapping
+	public String addContacts(@ModelAttribute("contact") Contacts contact) {
+		long idd = getUser_id();		
+		Users user = usersrepo.getById(idd);
+		contact.setUser(user);
+		
+		contactsser.saveContact(contact);
+				
+		return "redirect:/contacts/" + idd;
+	}
+}

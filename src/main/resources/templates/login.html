@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th = "http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Login</title>
+<link href="style/style.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Oswald:wght@600&display=swap" rel="stylesheet">
+</head>
+<body class="loginbody">	
+	<div class="logincontainer">
+		<h1 class="logincontainerh1">Sign In</h1>
+		<form th:action="@{/users/login}" method="post">
+			<label class="loginelements loginlabel" for="username">Username : </label>
+			<input class="loginelements logininput" id="username" placeholder="Username or Email" type="text" name="username">
+			<label class="loginelements loginlabel" for="pass">Password </label>
+			<input class="loginelements logininput" id="pass" placeholder="Input your password" type="password" name="password">
+			<button class = "loginbutton" type="submit">Login</button>
+		</form>
+	</div>
+	<div class="loginfail" th:if="${param.fail}">
+		<p class="loginfailp">User not logged in. Username and Password not match.</p>
+		<div class="loginfailclose">X</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="scripts/login.js"></script>
+</body>
+</html>
