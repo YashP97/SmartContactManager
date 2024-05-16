@@ -1,5 +1,5 @@
-$.get("navigation.html", function(data){
-    $("#nav-placeholder").replaceWith(data);
+//$.get("navigation.html", function(data){
+    ///$("#usernavigation").replaceWith(data);
 });
 
 $(".usernew").click(function(){
