@@ -1,3 +1,7 @@
+$.get("navigation.html", function(data){
+    $("#nav-placeholder").replaceWith(data);
+});
+
 $(".usernew").click(function(){
 	 $(".usernewdiv").addClass("userclicknewdiv");
 });

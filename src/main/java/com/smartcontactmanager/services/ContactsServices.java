@@ -19,7 +19,7 @@ public class ContactsServices {
 	}
 	
 	public List<Contacts> getAllContacts(){
-		List<Contacts> users = contactsrepo.findAll();
+		List<Contacts> users = contactsrepo.findAll();		
 		return users;
 	}
 	
