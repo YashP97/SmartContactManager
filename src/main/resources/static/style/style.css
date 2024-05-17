@@ -272,7 +272,7 @@
 .userBody{
     width: 100%;
     height: 100vh;
-    background-color: aqua;
+    background-color: #CDE8E5;
     overflow: hidden;
     display: grid;
     grid-template-rows: 60px 20px auto;
@@ -292,7 +292,21 @@
 .cont{
     display: inline-block;
     position: relative;
-}*/
+}
+
+.h4{
+    margin-left: auto;
+    margin-right: 2%;
+}
+
+.navbarimg{
+	width: 30px;
+	height: 30px;
+	background: url("../images/projectLogo.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+*/
 
 .usernew{
     background-color: green;
@@ -318,11 +332,6 @@
     margin: 0%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 700;
-}
-
-.h4{
-    margin-left: auto;
-    margin-right: 2%;
 }
 
 .usercontainer{
@@ -423,19 +432,11 @@
     align-self: end;
 }
 
-.navbarimg{
-	width: 30px;
-	height: 30px;
-	background: url("../images/projectLogo.png");
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
-}
-
 /*---------------------------------------------------------------- navigation html ------------------------------------------------------------------*/
 .navbardiv{
 	width: 100%;
 	height: 100%;
-	background-color: black;	
+	background-color: #7AB2B2;	
 	display: flex;
 	align-items: center;
 	gap: 50px;
@@ -445,7 +446,6 @@
 .navbardiv1{
 	width: 50%;
 	height: 100%;	
-	/*margin: 0px 10px;*/
 	display: flex;
 	align-items: center;
 	gap: 25%;
@@ -459,12 +459,31 @@
 	background-repeat: no-repeat;
 }
 
+.navbardiv1_logotoolstrip{
+	width: 6%;
+	height: 5%;
+	background-color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 8%;
+	left: 5%;	
+}
+
+.navbardiv1_logotoolstripcontent{
+	font-size: 80%;
+	font-family: monospace;
+	font-weight: 900;
+}
+
 .navbardiv1_search{
 	width: 50%;
-	height: 50%;
+	height: 60%;
 	background: white;
 	display: flex;
 	align-items: center;	
+	border: 2px solid #4D869C;
 }
 
 .navbardiv1_searchinputdiv{
