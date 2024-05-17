@@ -5,16 +5,16 @@
 <title>Hello User</title>
 <link rel="stylesheet" th:href="@{/style/style.css}">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>  
+<script src="/scripts/user.js"></script>
 </head>
 <body class="userBody">
     <!--  <div class="usernavbar">
         <p class="cont P">Smart Contact Manager</p>
         <p class="cont h4">Name</p>   
-        <div class="cont navbarimg"></div>                    
+        <div class="cont navbarimg"></div>   
+        <iframe src="../navigation.html"></iframe>                 
     </div>-->
-    <div id="usernavigation">   
-    	<embed type="text/html" src="navigation.txt"> 
-    </div>
+    <div th:replace="fragments/navbar :: navbar" id="usernavigation"></div>
     <div class="usernew">
         <p class="newp">+ New</p>
     </div>
@@ -57,7 +57,6 @@
         		<button type="submit" class="usernewdivformbutton">Add User</button> 
         	</form>
         </div>
-    </div>  
-    <script src="/scripts/user.js"></script>      
+    </div>          
 </body>
 </html>

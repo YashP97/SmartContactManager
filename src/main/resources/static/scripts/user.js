@@ -1,7 +1,3 @@
-//$.get("navigation.html", function(data){
-    ///$("#usernavigation").replaceWith(data);
-});
-
 $(".usernew").click(function(){
 	 $(".usernewdiv").addClass("userclicknewdiv");
 });
@@ -14,3 +10,7 @@ $(".usernewdivclose").click(function(){
     $(".usernewdiv").removeClass("userclicknewdiv");
     document.getElementById("usernewdivformform").reset();        
 });
+
+//$.get("navigation.html", function(data){
+   //$("#usernavigation").replaceWith(data);
+//});
