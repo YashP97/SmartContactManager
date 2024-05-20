@@ -6,6 +6,10 @@
 	box-sizing: border-box;
 }
 
+:root{
+	--maincolor : #CDE8E5;
+}
+
 /*flex-direction: column;------------------------------------------welcome-------------------------------------------------*/
 .welcomebody{
 	width: 100vw;
@@ -63,7 +67,7 @@
 .loginbody{
 	width: 100vw;
 	height: 100vh;	
-	background-color: #86DFBF;
+	background-color: var(--maincolor);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -81,7 +85,7 @@
 	margin-bottom: 8%;
 	border: none;
 	border-bottom: 1px solid black;
-	background-color: #EEF0E5;
+	background-color: #EEF0E5;	
 	font-size: 1.2rem;
 	padding: 2px 0px 2px 5px;
 }
@@ -106,11 +110,12 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-direction: column;
-	border: 2px solid black;
+	flex-direction: column;	
 	padding: 10px 15px;
-	background-color: #FFFFEC;
+	/*background-color: #FFFFEC;
+	border: 2px solid black;*/
 	font-family: 'Montserrat', sans-serif;
+	box-shadow: 2px 2px 6px #4D869C;
 }
 
 .logincontainerh1{
@@ -169,7 +174,7 @@
 .registerbody{
 	width: 100vw;
 	height: 100vh;	
-	background-color: #86DFBF;
+	background-color: var(--maincolor);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -272,7 +277,7 @@
 .userBody{
     width: 100%;
     height: 100vh;
-    background-color: #CDE8E5;
+    background-color: var(--maincolor);
     overflow: hidden;
     display: grid;
     grid-template-rows: 60px 20px auto;
@@ -460,21 +465,31 @@
 }
 
 .navbardiv1_logotoolstrip{
-	width: 6%;
-	height: 5%;
-	background-color: white;
-	display: flex;
-	align-items: center;
+	width: fit-content;
+	height: fit-content;
+	padding: 3px;
+	border: 1.5px solid #4D869C;
+	background-color: #7AB2B2;
+	display: none;
+	/*align-items: center;
 	justify-content: center;
 	position: absolute;
 	top: 8%;
-	left: 5%;	
+	left: 5%;	*/
+}
+
+.navbardiv1_logo:hover + .navbardiv1_logotoolstrip{
+	display: block;
+	position: absolute;
+	top: 8%;
+	left: 5%;
 }
 
 .navbardiv1_logotoolstripcontent{
-	font-size: 80%;
+	font-size: 90%;
 	font-family: monospace;
 	font-weight: 900;
+	color: #FFE8C8;
 }
 
 .navbardiv1_search{
@@ -528,6 +543,23 @@
 
 .navbardiv2{
 	width: 50%;
-	height: 10px;
+	height: 100%;
 	background-color: white;
+	display: flex;
+	align-items: center;
+	gap: 2%;
+	justify-content: flex-end;
+}
+
+.navbardiv2_new{
+	width: fitcontent;
+	height: fitcontent;
+	background: aqua;
+}
+
+.navbardiv2_profile{
+	width: 30%;
+	height: 30%;
+	clip-path: circle(10%);
+	background: black;
 }
