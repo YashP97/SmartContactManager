@@ -46,13 +46,15 @@ public class ContactsController {
 	public String getUserPage(Model model) {
 		long idd = getUser_id();
 		List<Contacts> useren = contactsser.getContactsbyUserId(idd);
-		model.addAttribute("contacts", useren);		
+		model.addAttribute("contacts", useren);	
+		model.addAttribute("totalcontacts", useren.size());
 		return "user";
 	}
 	
 	@PostMapping
 	public String addContacts(@ModelAttribute("contact") Contacts contact) {
 		long idd = getUser_id();		
+		@SuppressWarnings("deprecation")
 		Users user = usersrepo.getById(idd);
 		contact.setUser(user);
 		
