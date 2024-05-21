@@ -359,10 +359,12 @@
 }
 
 .usercontainertabletbodytr:nth-child(even){
+	text-align: center;
 	background: #F3EEEA;
 }
 
 .usercontainertabletbodytr:nth-child(odd){
+	text-align: center;
 	background: #EEF5FF;
 }
 

@@ -30,7 +30,7 @@
     			</tr>    		
     		</thead>
     		<tbody class="usercontainertabletbody">
-    			<tr th:each="contact : ${contacts}" class="usercontainertabletr usercontainertabletbodytr">
+    			<tr th:each="contact : ${contacts}" class="usercontainertabletbodytr">
     				<td th:text="${contact.name}" class="usercontainertabletd usercontainertabletbodytd">Name</td>
     				<td th:text="${contact.occupation}" class="usercontainertabletd usercontainertabletbodytd">Occupation</td>
     				<td th:text="${contact.address}" class="usercontainertabletd usercontainertabletbodytd">Address</td>

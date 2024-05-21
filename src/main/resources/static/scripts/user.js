@@ -15,6 +15,10 @@ $(".usernewdivclose").click(function(){
     document.getElementById("usernewdivformform").reset();        
 });
 
+$(".usercontainertabletbodytr").click(function(){
+	$(".usercontainertabletbodytr").style.backgroundColor="yellow";
+});
+
 //$.get("navigation.html", function(data){
    //$("#usernavigation").replaceWith(data);
 //});
