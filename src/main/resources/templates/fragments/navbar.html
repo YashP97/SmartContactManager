@@ -21,15 +21,15 @@
 			</div>
 			<div class="navbardiv2">
 				<div class="navbardiv2_total">
-					<label for="navbardiv2_totalinput">Total Contacts : </label>
-					<input type="text" th:value="${totalcontacts}" id="navbardiv2_totalinput" disabled>
+					<label for="navbardiv2_totalp" style="font-weight: 600; font-size: 100%">Total Contacts : </label>
+					<p th:text="${totalcontacts}" id="navbardiv2_totalp">						
 				</div>
 				<div class="navbardiv2_new">
 					<p class="navbardiv2_new_p">+ New</p>
 				</div>
 				<div class="navbardiv2_profile"></div>
-				<div class="navbardiv1_logotoolstrip">
-					<p class="navbardiv1_logotoolstripcontent">Smart Contact Manager</p>
+				<div class="navbardiv2_profiletoolstrip">
+					<p th:text="${username}" class="navbardiv1_logotoolstripcontent"></p>								
 				</div>
 			</div>
 		</div>		

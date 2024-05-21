@@ -22,6 +22,7 @@ public class ContactsController {
 	private ContactsServices contactsser;
 	private  UsersRepository usersrepo;
 	private long user_id;
+	private String username;
 
 	@Autowired
 	public ContactsController(ContactsServices contactsser,  UsersRepository usersrepo) {
@@ -37,6 +38,14 @@ public class ContactsController {
 		this.user_id = user_id;
 	}
 	
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
 	@ModelAttribute("contact")
 	public Contacts newContact() {
 		return new Contacts();
@@ -48,6 +57,7 @@ public class ContactsController {
 		List<Contacts> useren = contactsser.getContactsbyUserId(idd);
 		model.addAttribute("contacts", useren);	
 		model.addAttribute("totalcontacts", useren.size());
+		model.addAttribute("username", getUsername().toUpperCase());
 		return "user";
 	}
 	
@@ -56,7 +66,7 @@ public class ContactsController {
 		long idd = getUser_id();		
 		@SuppressWarnings("deprecation")
 		Users user = usersrepo.getById(idd);
-		contact.setUser(user);
+		contact.setUser(user);		
 		
 		contactsser.saveContact(contact);
 				

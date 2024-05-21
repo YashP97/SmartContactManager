@@ -548,21 +548,25 @@
 	/*background-color: white;*/
 	display: flex;
 	align-items: center;
-	gap: 7%;
+	gap: 10%;
 	justify-content: flex-end;
 }
 
-#navbardiv2_totalinput{
-	width: 100px;
-	height: fit-content;
+.navbardiv2_total{
+	width: fit-content;
+	height: 50%;	
+	display: flex;
+	align-items: center;
+}
+
+#navbardiv2_totalp{	
 	font-size: 100%;	
 	font-weight: 600;
-	color: red;
-	border: none;
-	outline: none;
+	color: #F8F4E1;	
 	background: none;
-	display: inline-flex;
-	align-items: center;
+	display: inline;
+	margin-left: 5px; 	
+	font-family: sans-serif;
 }
 
 .navbardiv2_new{
@@ -597,4 +601,20 @@
 	background-image: url("../images/man.png");
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
+}
+
+.navbardiv2_profiletoolstrip{
+	width: fit-content;
+	height: fit-content;
+	padding: 3px;
+	border: 1.5px solid #4D869C;
+	background-color: #7AB2B2;
+	display: none;	
+}
+
+.navbardiv2_profile:hover + .navbardiv2_profiletoolstrip{
+	display: block;
+	position: absolute;
+	top: 8.5%;
+	right: 3.5%;
 }

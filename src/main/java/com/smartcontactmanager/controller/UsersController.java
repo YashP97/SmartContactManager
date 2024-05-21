@@ -53,6 +53,7 @@ public class UsersController {
 		if(logged) {
 			long id = usersser.findUserByUserName(username);
 			cont_cont.setUser_id(id);
+			cont_cont.setUsername(username);
 			return "redirect:/contacts/" + id;
 		}else {
 			return "redirect:/login?fail";
