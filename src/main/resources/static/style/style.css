@@ -82,12 +82,13 @@ body{
 }
 
 .logincontainer{
-	width: max-content;
-	height: max-content;	
+	width: fit-content;
+	height: fit-content;	
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-direction: column;	
+	flex-direction: column;		
+	gap: 10px;	
 	padding: 10px 15px;
 	/*background-color: #FFFFEC;
 	border: 2px solid black;*/
@@ -96,11 +97,16 @@ body{
 }
 
 .logincontainerh1{
+	flex: 1;	
 	margin: 0% 0% 5% 0%;	
 	letter-spacing: 0.2rem;
 	word-spacing: 0.2rem;
 	color: red;
 	font-family: 'Oswald', sans-serif;
+}
+
+.logincontainerform{	
+	height: 100%;
 }
 
 .loginelements{
@@ -162,7 +168,7 @@ body{
 	cursor : pointer;
 }
 
-.loginbutton{
+.loginbutton{	
 	display: block;
 	margin: auto;
 	margin-bottom: 2px;

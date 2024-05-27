@@ -11,8 +11,8 @@
 <body class="loginbody">	
 	<div class="logincontainer">
 		<h1 class="logincontainerh1">Sign In</h1>
-		<form th:action="@{/users/login}" method="post">
-			<label class="loginelements loginlabel" for="username">Username : </label>
+		<form th:action="@{/users/login}" method="post" class="logincontainerform">
+			<label class="loginelements loginlabel" for="username">Username </label>
 			<input class="loginelements logininput" id="username" placeholder="Username or Email" type="text" name="username">
 			<label class="loginelements loginlabel" for="pass">Password </label>
 			<input class="loginelements logininput" id="pass" placeholder="Input your password" type="password" name="password">
