@@ -12,7 +12,7 @@
 	</div>
 	<div class="registercontainer">
 		<p class="registercontainerp">Sign Up</p>
-		<form th:action="@{/users/newregistration}" method="post" th:object="${newuser}">
+		<form th:action="@{/users/newregistration}" method="post" th:object="${newuser}" class="registrationcontainerform">
 			<label class="registerelements registerlabel" for="name">Name : </label>
 			<input class="registerelements registerinput" type="text" id="name" name="name" th:value="${name}">
 			<label class="registerelements registerlabel" for="username">User Name : </label>
@@ -26,6 +26,7 @@
 			<label class="registerelements registerlabel" for="desc">About : </label>
 			<textarea rows="4" cols="35" id="desc" name="description" th:value="${description}"></textarea>
 			<button class ="registerbutton" type="submit">Register</button>
+			<button th:replace="fragments/googlesigninbutton :: googlesignin" type="submit"></button>
 		</form>
 	</div>
 </body>
