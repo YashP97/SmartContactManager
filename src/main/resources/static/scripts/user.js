@@ -15,9 +15,9 @@ $(".usernewdivclose").click(function(){
     document.getElementById("usernewdivformform").reset();        
 });
 
-$(".usercontainertabletbodytr").click(function(){
-	$(".usercontainertabletbodytr").style.backgroundColor="yellow";
-});
+let table = $("#usertable");
+let tbody = table.get
+
 
 //$.get("navigation.html", function(data){
    //$("#usernavigation").replaceWith(data);
