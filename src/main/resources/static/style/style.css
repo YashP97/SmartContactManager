@@ -633,6 +633,37 @@ body{
 	right: 3.5%;
 }
 
-.active{
-	background: "yellow";
+/*-------------------------------------------- Operationsdiv ---------------------------------------------------*/
+.operationsdiv{
+	width: 50%;
+	height: 50%;
+	display: block;
 }
+
+#infologo{
+	width: 50%;
+	height: 50%;
+	background: url("../images/info-button.png");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+#editlogo{
+	width: 50%;
+	height: 50%;
+	background: url("../images/edit.png");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+#deletelogo{
+	width: 50%;
+	height: 50%;
+	background: url("../images/delete.png");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+/*.active{
+	background: "yellow";
+}*/
