@@ -452,6 +452,7 @@ body{
     align-self: end;
 }
 
+
 /*---------------------------------------------------------------- navigation html ------------------------------------------------------------------*/
 .navbardiv{
 	width: 100%;
@@ -635,31 +636,59 @@ body{
 
 /*-------------------------------------------- Operationsdiv ---------------------------------------------------*/
 .operationsdiv{
-	width: 50%;
-	height: 50%;
-	display: block;
+	width: 132px;
+	height: 35px;
+	display: flex;
+	border : none;
+	position: relative;
+	place-self: center;
+	overflow: visible;	
+	background: white;
+	border-radius: 5%;
+	padding: 2px;
 }
 
-#infologo{
-	width: 50%;
-	height: 50%;
-	background: url("../images/info-button.png");
+.operationsdiv:after{
+	position: absolute;
+	width: 15px;
+	height: 15px;	
+	top: 30%;
+	left: -5%;
+	transform: rotate(45deg);
+	content:"";
+	background: linear-gradient(45deg, white, white);	
+	border-top: none;
+	border-right: none;		
+}
+
+.operationsdivimage{
+	width: 44px;
+	height: 100%;	
+	cursor: pointer;
+}
+
+.operationsdivhr{
+	border: 1px inset lightgray;
+	border-radius: 5%;	
+	margin: 0px 3px;
+}
+
+
+#infologo{	
+	background: url("../images/info-button.png");	
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
+	z-index: 1;
 }
 
-#editlogo{
-	width: 50%;
-	height: 50%;
+#editlogo{	
 	background: url("../images/edit.png");
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 }
 
-#deletelogo{
-	width: 50%;
-	height: 50%;
-	background: url("../images/delete.png");
+#deletelogo{	
+	background: url("../images/delete.png");	
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 }

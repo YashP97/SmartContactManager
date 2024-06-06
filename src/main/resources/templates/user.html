@@ -37,10 +37,11 @@
     				<td th:text="${contact.mobile}" class="usercontainertabletd usercontainertabletbodytd">Mobile Number</td>    				
     			</tr>
     		</tbody>
-    	</table>
+    	</table>    	   	
     </div>
+    <div th:replace="fragments/operationsdiv :: operational" class="useroperationaldiv"></div>
     
-    <div th:replace="fragments/operationsdiv :: operational"></div>
+    
     
     <div class="usernewdiv">
         <div class="usernewdivclose">X</div>
