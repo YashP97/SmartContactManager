@@ -22,7 +22,7 @@
     <div class="usercontainer">
     	<table id="usertable" class="usercontainertable">
     		<thead class="usercontainertablethead">
-    			<tr class="usercontainertabletr">
+    			<tr class="usercontainertabletheadtr">
     				<td class="usercontainertabletd">Name</td>
     				<td class="usercontainertabletd">Occupation</td>
     				<td class="usercontainertabletd">Address</td>
@@ -34,12 +34,13 @@
     				<td th:text="${contact.name}" class="usercontainertabletd usercontainertabletbodytd">Name</td>
     				<td th:text="${contact.occupation}" class="usercontainertabletd usercontainertabletbodytd">Occupation</td>
     				<td th:text="${contact.address}" class="usercontainertabletd usercontainertabletbodytd">Address</td>
-    				<td th:text="${contact.mobile}" class="usercontainertabletd usercontainertabletbodytd">Mobile Number</td>    				
-    			</tr>
+    				<td th:text="${contact.mobile}" class="usercontainertabletd usercontainertabletbodytd">Mobile Number</td>    				 				
+    			</tr>    			
     		</tbody>
-    	</table>    	   	
+    	</table>    
+    	<div th:replace="fragments/operationsdiv :: operational"></div>		   	
     </div>
-    <div th:replace="fragments/operationsdiv :: operational" class="useroperationaldiv"></div>
+   
     
     
     

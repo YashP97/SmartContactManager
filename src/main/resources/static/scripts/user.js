@@ -15,8 +15,20 @@ $(".usernewdivclose").click(function(){
     document.getElementById("usernewdivformform").reset();        
 });
 
-let table = $("#usertable");
-let tbody = table.get
+$(".usercontainertabletbodytr").mouseenter(function(){	
+	$(".operationsdiv")[0].style.display="flex";
+	$(".operationsdiv")[0].style.position="absolute";
+	
+});
+
+$(".usercontainertabletbodytr").mouseout(function(){	
+	$(".operationsdiv")[0].style.display="none";	
+});
+
+//$(".usercontainertabletbodytr").hover(function(){
+	//$(".operationsdiv")[0].style.display="flex";
+	//$(".operationsdiv")[0].style.position="absolute";
+//})
 
 
 //$.get("navigation.html", function(data){

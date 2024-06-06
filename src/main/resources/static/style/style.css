@@ -357,8 +357,10 @@ body{
     height: max-content; 
     min-height: 15%;  
     margin: auto;    
-    /*display: grid;*/
-    background-color: white;
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+    /*background-color: white;*/
 }
 
 .usercontainertable{
@@ -366,26 +368,32 @@ body{
 	height: max-content;	
 }
 
-.usercontainertabletr{
+.usercontainertablethead{	
+	height: 45px;
+	color: white;
+	font-size: 1.2rem;
+	font-weight: 900;
+	background: #4F6F52;
+}
+
+.usercontainertabletheadtr{
 	text-align: center;
+	min-height: 45px;
 }
 
 .usercontainertabletbodytr:nth-child(even){
 	text-align: center;
 	background: #F3EEEA;
+	min-height: 42px;
+	height: 42px;
+	
 }
 
 .usercontainertabletbodytr:nth-child(odd){
 	text-align: center;
 	background: #EEF5FF;
-}
-
-.usercontainertablethead{	
-	height: 32px;
-	color: white;
-	font-size: 1.2rem;
-	font-weight: 900;
-	background: #4F6F52;
+	min-height: 42px;
+	height: 42px;
 }
 
 .usercontainertabletbodytd{
@@ -638,14 +646,14 @@ body{
 .operationsdiv{
 	width: 132px;
 	height: 35px;
-	display: flex;
+	display: none;
 	border : none;
 	position: relative;
-	place-self: center;
+	justify-self: flex-end;
 	overflow: visible;	
 	background: white;
 	border-radius: 5%;
-	padding: 2px;
+	padding: 2px;	
 }
 
 .operationsdiv:after{
