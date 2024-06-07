@@ -17,18 +17,21 @@ $(".usernewdivclose").click(function(){
 
 $(".usercontainertabletbodytr").mouseenter(function(){	
 	$(".operationsdiv")[0].style.display="flex";
-	$(".operationsdiv")[0].style.position="absolute";
-	
+	$(".operationsdiv")[0].style.position="absolute";	
 });
 
 $(".usercontainertabletbodytr").mouseout(function(){	
 	$(".operationsdiv")[0].style.display="none";	
 });
 
+$("#infologo").click(function(){
+	window.location.href = "./contact/info";
+});
+
 //$(".usercontainertabletbodytr").hover(function(){
 	//$(".operationsdiv")[0].style.display="flex";
 	//$(".operationsdiv")[0].style.position="absolute";
-//})
+//}, 2000);
 
 
 //$.get("navigation.html", function(data){

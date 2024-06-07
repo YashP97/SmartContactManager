@@ -51,7 +51,8 @@ public class ContactsController {
 		return new Contacts();
 	}
 
-	@GetMapping("/{id}")
+//	@GetMapping("/{id}")
+	@GetMapping()
 	public String getUserPage(Model model) {
 		long idd = getUser_id();
 		List<Contacts> useren = contactsser.getContactsbyUserId(idd);
@@ -70,6 +71,7 @@ public class ContactsController {
 		
 		contactsser.saveContact(contact);
 				
-		return "redirect:/contacts/" + idd;
+//		return "redirect:/contacts/" + idd;
+		return "redirect:/contacts";
 	}
 }

@@ -359,7 +359,7 @@ body{
     margin: auto;    
     display: flex;
     position: relative;
-    justify-content: flex-end;
+    justify-content: flex-end;    
     /*background-color: white;*/
 }
 
@@ -653,7 +653,7 @@ body{
 	overflow: visible;	
 	background: white;
 	border-radius: 5%;
-	padding: 2px;	
+	padding: 2px;		
 }
 
 .operationsdiv:after{
