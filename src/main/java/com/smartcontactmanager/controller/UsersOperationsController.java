@@ -10,6 +10,6 @@ public class UsersOperationsController {
 	
 	@GetMapping("/info")
 	public String getContactInfo() {
-		return "Hello";
+		return "contactinfo";
 	}
 }
