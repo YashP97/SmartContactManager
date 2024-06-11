@@ -368,6 +368,10 @@ body{
 	height: max-content;	
 }
 
+#usercontainertablecontactsids{
+	display: none;
+}
+
 .usercontainertablethead{	
 	height: 45px;
 	color: white;
@@ -701,6 +705,6 @@ body{
 	background-repeat: no-repeat;
 }
 
-/*.active{
-	background: "yellow";
-}*/
+.active{
+	background-color: "yellow";
+}

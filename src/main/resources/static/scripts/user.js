@@ -28,6 +28,15 @@ $("#infologo").click(function(){
 	window.location.href = "./contact/info";
 });
 
+$(document).ready(function(){
+	console.log("Document ready");
+    $("#usertable > tr > td").click(function(){
+	console.log("Table ready");
+        $(this).toggleClass("active");
+    });
+    console.log("Document ready2");
+});
+
 //$(".usercontainertabletbodytr").hover(function(){
 	//$(".operationsdiv")[0].style.display="flex";
 	//$(".operationsdiv")[0].style.position="absolute";

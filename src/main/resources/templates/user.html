@@ -23,6 +23,7 @@
     	<table id="usertable" class="usercontainertable">
     		<thead class="usercontainertablethead">
     			<tr class="usercontainertabletheadtr">
+    				<td class="usercontainertabletd" id="usercontainertablecontactsids">ID</td>
     				<td class="usercontainertabletd">Name</td>
     				<td class="usercontainertabletd">Occupation</td>
     				<td class="usercontainertabletd">Address</td>
@@ -31,6 +32,7 @@
     		</thead>
     		<tbody class="usercontainertabletbody">
     			<tr th:each="contact : ${contacts}" class="usercontainertabletbodytr">
+    				<td th:text="${contact.id}" class="usercontainertabletd usercontainertabletbodytd" id="usercontainertablecontactsids">ID</td>
     				<td th:text="${contact.name}" class="usercontainertabletd usercontainertabletbodytd">Name</td>
     				<td th:text="${contact.occupation}" class="usercontainertabletd usercontainertabletbodytd">Occupation</td>
     				<td th:text="${contact.address}" class="usercontainertabletd usercontainertabletbodytd">Address</td>
