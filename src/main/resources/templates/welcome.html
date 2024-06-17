@@ -6,11 +6,12 @@
 <link href="style/style.css" rel="stylesheet">
 </head>
 <body class="welcomebody">
-	<div class = "navbar">
+	<div th:replace="fragments/navbar :: welcomenavbar"></div>
+	<!--  <div class = "navbar">
 		<p class="welcomenavbarp">Smart Contact Manager</p>
 		<a th:href="@{/login}" class="welcomenavbarlogin link">Login</a>
 		<a th:href="@{/register}" class="link">New User</a>
-	</div>
+	</div>-->
 	<div class="container">
 		<h1 class="heading">Welcome to Smart Contact Manager</h1>		
 	</div>

@@ -3,7 +3,22 @@
 <head>
 </head>
 <body>
-	<nav th:fragment="navbar">
+	<nav class = "welcomenavbar" th:fragment="welcomenavbar">
+		<div class="navbardiv">
+			<div class="navbardiv1">
+				<div class="navbardiv1_logo"></div>
+				<div class="navbardiv1_logotoolstrip">
+					<h1  class="navbardiv1_logotoolstripcontent">Smart Contact Manager</h1>					
+				</div>				
+			</div>
+			<div class="navbardiv2 welcomenavbardiv2">				
+				<a th:href="@{/login}" class="link">Sign In</a>
+				<a th:href="@{/register}" class="link">Sign Up</a>
+			</div>
+		</div>		
+	</nav>
+	
+	<nav th:fragment="usernavbar">
 		<div class="navbardiv">
 			<div class="navbardiv1">
 				<div class="navbardiv1_logo"></div>

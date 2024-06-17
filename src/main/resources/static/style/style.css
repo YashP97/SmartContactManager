@@ -5,6 +5,7 @@
 	padding: 0%;
 	box-sizing: border-box;
 	overflow: hidden;
+	font-family: Rubik;
 }
 
 :root{
@@ -14,6 +15,11 @@
 body{
 	width: 100vw;
 	height: 100vh;
+}
+
+@font-face{
+	font-family: Rubik;
+	src: url(../../fonts/rubik/static/Rubik-Black.ttf);
 }
 
 /*------------------------------------------welcome-------------------------------------------------*/
@@ -36,9 +42,9 @@ body{
 	align-self: flex-start;
 }
 
-.navbar{	
+.welcomenavbar{	
 	width: 100%;
-	height: 40px;
+	height: 50px;
 	background-color: black;	
 	margin: 0;		
 	align-self: flex-start;
@@ -57,16 +63,15 @@ body{
 .link{	
 	text-decoration: none;
 	color: white;
-	font-size: 110%;
-	margin-right: 15px;
+	font-size: 110%;	
 	font-family: sans-serif;
 	font-weight: 800;
 	cursor: pointer;	
 }
 
-.welcomenavbarlogin{
-	margin: auto;
-	margin-right: 15px;
+.welcomenavbardiv2{
+	flex-grow: 1;
+	gap: 6% !important;
 }
 
 /*------------------------------------------------------Login----------------------------------------------------------------------*/
@@ -365,7 +370,7 @@ body{
 
 .usercontainertable{
 	width: 100%;
-	height: max-content;	
+	height: max-content;		
 }
 
 #usercontainertablecontactsids{
@@ -390,7 +395,7 @@ body{
 	background: #F3EEEA;
 	min-height: 42px;
 	height: 42px;
-	
+	cursor: pointer;
 }
 
 .usercontainertabletbodytr:nth-child(odd){
@@ -398,6 +403,7 @@ body{
 	background: #EEF5FF;
 	min-height: 42px;
 	height: 42px;
+	cursor: pointer;
 }
 
 .usercontainertabletbodytd{
@@ -485,7 +491,9 @@ body{
 }
 
 .navbardiv1_logo{
-	width: 10%;
+	/*width: 10%;
+	height: 90%;*/
+	width: 5vw;
 	height: 90%;
 	background: url("../images/projectLogo.png");
 	background-size: 100% 100%;
@@ -706,5 +714,6 @@ body{
 }
 
 .active{
-	background-color: "yellow";
+	background: #FFFDB5;
+	color: #DD761C;
 }
