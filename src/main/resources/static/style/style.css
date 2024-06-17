@@ -22,6 +22,11 @@ body{
 	src: url(../../fonts/rubik/static/Rubik-Black.ttf);
 }
 
+.active{
+	background: #FFFDB5;
+	color: #DD761C;
+}
+
 /*------------------------------------------welcome-------------------------------------------------*/
 .welcomebody{
 	/*width: 100vw;
@@ -658,7 +663,7 @@ body{
 .operationsdiv{
 	width: 132px;
 	height: 35px;
-	display: none;
+	display: flex !important;
 	border : none;
 	position: relative;
 	justify-self: flex-end;
@@ -711,9 +716,4 @@ body{
 	background: url("../images/delete.png");	
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
-}
-
-.active{
-	background: #FFFDB5;
-	color: #DD761C;
 }

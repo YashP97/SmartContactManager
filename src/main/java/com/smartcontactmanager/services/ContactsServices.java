@@ -31,4 +31,8 @@ public class ContactsServices {
 		List<Contacts> contacts =  contactsrepo.findByUserId(id);
 		return contacts;
 	}
+	
+	public void deleteContact(long id) {
+		contactsrepo.deleteById(id);
+	}
 }
