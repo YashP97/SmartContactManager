@@ -1,6 +1,6 @@
 @charset "ISO-8859-1";
 
-*{
+* {
 	margin: 0%;
 	padding: 0%;
 	box-sizing: border-box;
@@ -8,79 +8,80 @@
 	font-family: Rubik;
 }
 
-:root{
-	--maincolor : #CDE8E5;
+:root 
+{ 
+	--maincolor: #CDE8E5;
 }
 
-body{
+body {
 	width: 100vw;
 	height: 100vh;
 }
 
-@font-face{
+@font-face {
 	font-family: Rubik;
 	src: url(../../fonts/rubik/static/Rubik-Black.ttf);
 }
 
-.active{
+.active {
 	background: #FFFDB5;
 	color: #DD761C;
 }
 
 /*------------------------------------------welcome-------------------------------------------------*/
-.welcomebody{
+.welcomebody {
 	/*width: 100vw;
 	height: 100vh;	
 	background-color: #86DFBF;*/
-	background : url("../images/welcome_page.jpg");
+	background: url("../images/welcome_page.jpg");
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	padding: 0;
-	margin: 0;	
+	margin: 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
 }
 
-.container{
+.container {
 	align-self: flex-start;
 }
 
-.welcomenavbar{	
+.welcomenavbar {
 	width: 100%;
 	height: 50px;
-	background-color: black;	
-	margin: 0;		
+	background-color: black;
+	margin: 0;
 	align-self: flex-start;
 	display: flex;
 	align-items: center;
-	justify-content: left;	
+	justify-content: left;
 }
 
-.welcomenavbarp{
+.welcomenavbarp {
 	color: white;
 	margin-left: 1.5%;
 	font-weight: 800;
 	font-size: 110%;
 }
 
-.link{	
+.link {
 	text-decoration: none;
 	color: white;
-	font-size: 110%;	
+	font-size: 110%;
 	font-family: sans-serif;
 	font-weight: 800;
-	cursor: pointer;	
+	cursor: pointer;
 }
 
-.welcomenavbardiv2{
+.welcomenavbardiv2 {
 	flex-grow: 1;
 	gap: 6% !important;
 }
 
 /*------------------------------------------------------Login----------------------------------------------------------------------*/
-.loginbody{
+.loginbody {
 	/*width: 100%;
 	height: 100%;	*/
 	background-color: var(--maincolor);
@@ -91,14 +92,14 @@ body{
 	overflow: hidden;
 }
 
-.logincontainer{
+.logincontainer {
 	width: fit-content;
-	height: fit-content;	
+	height: fit-content;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-direction: column;		
-	gap: 10px;	
+	flex-direction: column;
+	gap: 10px;
 	padding: 10px 15px;
 	/*background-color: #FFFFEC;
 	border: 2px solid black;*/
@@ -106,49 +107,49 @@ body{
 	box-shadow: 2px 2px 6px #4D869C;
 }
 
-.logincontainerh1{		
-	margin: 0% 0% 5% 0%;	
+.logincontainerh1 {
+	margin: 0% 0% 5% 0%;
 	letter-spacing: 0.2rem;
 	word-spacing: 0.2rem;
 	color: red;
 	font-family: 'Oswald', sans-serif;
 }
 
-.logincontainerform, .registrationcontainerform{	
+.logincontainerform, .registrationcontainerform {
 	height: 100%;
 	overflow: unset;
 }
 
-.loginelements{
-	display : block;
+.loginelements {
+	display: block;
 }
 
-.loginlabel{
+.loginlabel {
 	margin-bottom: 3%;
 	font-size: 1.3rem;
 	font-weight: 700;
 }
 
-.logininput{
+.logininput {
 	width: 20vw;
 	height: 5vh;
 	margin-bottom: 8%;
 	border: none;
 	border-bottom: 1px solid black;
-	background-color: #EEF0E5;	
+	background-color: #EEF0E5;
 	font-size: 1.2rem;
 	padding: 2px 0px 2px 5px;
 }
 
-.logininput:focus::placeholder{
-	color: transparent;	
+.logininput:focus::placeholder {
+	color: transparent;
 }
 
-.logininput:focus{	
+.logininput:focus {
 	outline: none;
 }
 
-.loginfail{
+.loginfail {
 	position: absolute;
 	bottom: 1%;
 	display: block;
@@ -159,14 +160,14 @@ body{
 	padding: 5px;
 }
 
-.loginfailp{
+.loginfailp {
 	margin: 0%;
 	font-size: 1.2rem;
 	color: #B0A695;
 	display: inline-block;
 }
 
-.loginfailclose{
+.loginfailclose {
 	width: fit-content;
 	height: fit-content;
 	display: inline-block;
@@ -175,25 +176,25 @@ body{
 	margin-left: 2px;
 	padding: 5px;
 	font-family: sans-serif;
-	cursor : pointer;
+	cursor: pointer;
 }
 
-.loginbutton{	
+.loginbutton {
 	display: block;
 	margin: auto;
 	margin-bottom: 2px;
 	width: 100%;
 	height: 15%;
 	font-size: 1rem;
-	font-weight: 600;	
+	font-weight: 600;
 	background-color: #86A789;
 	border: 1px solid darkgreen;
-	letter-spacing: 0.8px;	
-	padding: 5px 15px 5px 10px;		
+	letter-spacing: 0.8px;
+	padding: 5px 15px 5px 10px;
 }
 
 /*------------------------------------------------Register-----------------------------------------------*/
-.registerbody{
+.registerbody {
 	/*width: 100vw;
 	height: 100vh;	*/
 	background-color: var(--maincolor);
@@ -204,9 +205,9 @@ body{
 	overflow: hidden;
 }
 
-.registercontainerp{
+.registercontainerp {
 	font-size: 1.5rem;
-	margin: 0% 0% 5% 0%;	
+	margin: 0% 0% 5% 0%;
 	letter-spacing: 0.2rem;
 	word-spacing: 0.2rem;
 	color: red;
@@ -214,17 +215,17 @@ body{
 	font-weight: 600;
 }
 
-.registerelements{
-	display : block;
+.registerelements {
+	display: block;
 }
 
-.registerlabel{
+.registerlabel {
 	margin-bottom: 1%;
 	font-size: 0.8rem;
 	font-weight: 600;
 }
 
-.registerinput{
+.registerinput {
 	width: 100%;
 	height: 3vh;
 	margin-bottom: 5%;
@@ -235,13 +236,13 @@ body{
 	padding: 2px 0px 2px 5px;
 }
 
-.registerinput:focus{
+.registerinput:focus {
 	outline: none;
 }
 
-.registercontainer{
+.registercontainer {
 	width: max-content;
-	height: max-content;	
+	height: max-content;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -252,21 +253,21 @@ body{
 	font-family: 'Montserrat', sans-serif;
 }
 
-.registerbutton{
+.registerbutton {
 	display: block;
 	margin: auto;
 	margin-bottom: 2px;
 	width: max-content;
 	height: max-content;
 	font-size: 0.8rem;
-	font-weight: 600;	
+	font-weight: 600;
 	background-color: #86A789;
 	border: 1px solid darkgreen;
-	letter-spacing: 0.8px;	
+	letter-spacing: 0.8px;
 	padding: 5px 10px 5px 10px;
 }
 
-.registersuccessdiv{
+.registersuccessdiv {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -275,37 +276,37 @@ body{
 	margin-bottom: 0.5em;
 }
 
-.registersuccessdivhr{	
+.registersuccessdivhr {
 	width: 0;
 	height: 2rem;
 	border: 0.5px solid black;
 	border-style: inset;
-	margin: 0 0.8em; 
+	margin: 0 0.8em;
 }
 
-.registersuccessdivp1, .registersuccessdivp2{
+.registersuccessdivp1, .registersuccessdivp2 {
 	display: inline-block;
 	font-size: 1.2rem;
 	margin: 0.5em 0 0.5em 0;
 	color: #B0A695;
 }
 
-.registersuccessdivp2{
+.registersuccessdivp2 {
 	text-decoration: none;
-	color: black;	
+	color: black;
 }
 
 /*--------------------------------------------User--------------------------------------------------*/
-.userBody{
-    /*width: 100%;
+.userBody {
+	/*width: 100%;
     height: 100vh;*/
-    background-color: var(--maincolor);
-    overflow: hidden;
-    display: grid;
-    /*grid-template-rows: 60px 20px auto;*/
-    grid-template-rows: 60px auto;
-    gap: 20px;
-    margin: 0%;   
+	background-color: var(--maincolor);
+	overflow: hidden;
+	display: grid;
+	/*grid-template-rows: 60px 20px auto;*/
+	grid-template-rows: 60px auto;
+	gap: 20px;
+	margin: 0%;
 }
 
 /*.usernavbar{
@@ -361,28 +362,27 @@ body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 700;
 }*/
-
-.usercontainer{
-    width: 95%;
-    height: max-content; 
-    min-height: 15%;  
-    margin: auto;    
-    display: flex;
-    position: relative;
-    justify-content: flex-end;    
-    /*background-color: white;*/
+.usercontainer {
+	width: 95%;
+	height: max-content;
+	min-height: 15%;
+	margin: auto;
+	display: flex;
+	position: relative;
+	justify-content: flex-end;
+	/*background-color: white;*/
 }
 
-.usercontainertable{
+.usercontainertable {
 	width: 100%;
-	height: max-content;		
+	height: max-content;
 }
 
-#usercontainertablecontactsids{
+#usercontainertablecontactsids {
 	display: none;
 }
 
-.usercontainertablethead{	
+.usercontainertablethead {
 	height: 45px;
 	color: white;
 	font-size: 1.2rem;
@@ -390,12 +390,12 @@ body{
 	background: #4F6F52;
 }
 
-.usercontainertabletheadtr{
+.usercontainertabletheadtr {
 	text-align: center;
 	min-height: 45px;
 }
 
-.usercontainertabletbodytr:nth-child(even){
+.usercontainertabletbodytr:nth-child(even) {
 	text-align: center;
 	background: #F3EEEA;
 	min-height: 42px;
@@ -403,7 +403,7 @@ body{
 	cursor: pointer;
 }
 
-.usercontainertabletbodytr:nth-child(odd){
+.usercontainertabletbodytr:nth-child(odd) {
 	text-align: center;
 	background: #EEF5FF;
 	min-height: 42px;
@@ -411,39 +411,35 @@ body{
 	cursor: pointer;
 }
 
-.usercontainertabletbodytd{
+.usercontainertabletbodytd {
 	color: #4F6F52;
-	font-weight: 600;	
+	font-weight: 600;
 	height: 25px;
 }
 
-.usernewdiv{    
-    display: none;        
-}
-
-.userclicknewdiv{
+.usernewdiv {
+	display: none;
 	width: 25%;
-    height: fit-content;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;   
-    background-color: #92C7CF;
-    align-self: center;
-    justify-self: center;
-    position: absolute;
-    z-index: 1;  
+	height: fit-content;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: #92C7CF;
+	align-self: center;
+	justify-self: center;
+	position: absolute;
+	z-index: 1;
 }
 
-.usernewdivheading{
+.usernewdivheading {
 	margin: 2% 0% 4% 0%;
 }
 
-.usernewdivform{
+.usernewdivform {
 	width: 90%;
 }
 
-.usernewdivformlabel{
+.usernewdivformlabel {
 	display: block;
 	font-size: 1.2rem;
 	font-weight: 600;
@@ -451,7 +447,7 @@ body{
 	color: #FF6868;
 }
 
-.usernewdivforminput{
+.usernewdivforminput {
 	display: block;
 	width: 100%;
 	height: 15%;
@@ -463,39 +459,38 @@ body{
 	font-size: 15px;
 }
 
-.usernewdivclose{
-    width: fit-content;
-    height: fit-content;
-    font-size: larger;
-    background-color: red;
-    color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;    
-    padding: 0px 3px 2px 3px;
-    cursor: pointer;
-    align-self: end;
+.usernewdivclose {
+	width: fit-content;
+	height: fit-content;
+	font-size: larger;
+	background-color: red;
+	color: white;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	padding: 0px 3px 2px 3px;
+	cursor: pointer;
+	align-self: end;
 }
 
-
 /*---------------------------------------------------------------- navigation html ------------------------------------------------------------------*/
-.navbardiv{
+.navbardiv {
 	width: 100%;
 	height: 100%;
-	background-color: #7AB2B2;	
+	background-color: #7AB2B2;
 	display: flex;
 	align-items: center;
 	gap: 50px;
-	padding : 0px 20px;
+	padding: 0px 20px;
 }
 
-.navbardiv1{
+.navbardiv1 {
 	width: 50%;
-	height: 100%;	
+	height: 100%;
 	display: flex;
 	align-items: center;
 	gap: 25%;
 }
 
-.navbardiv1_logo{
+.navbardiv1_logo {
 	/*width: 10%;
 	height: 90%;*/
 	width: 5vw;
@@ -505,7 +500,7 @@ body{
 	background-repeat: no-repeat;
 }
 
-.navbardiv1_logotoolstrip{
+.navbardiv1_logotoolstrip {
 	width: fit-content;
 	height: fit-content;
 	padding: 3px;
@@ -519,49 +514,49 @@ body{
 	left: 5%;	*/
 }
 
-.navbardiv1_logo:hover + .navbardiv1_logotoolstrip{
+.navbardiv1_logo:hover+.navbardiv1_logotoolstrip {
 	display: block;
 	position: absolute;
 	top: 8%;
 	left: 5%;
 }
 
-.navbardiv1_logotoolstripcontent{
+.navbardiv1_logotoolstripcontent {
 	font-size: 90%;
 	font-family: monospace;
 	font-weight: 900;
 	color: #FFE8C8;
 }
 
-.navbardiv1_search{
+.navbardiv1_search {
 	width: 50%;
 	height: 60%;
 	background: white;
 	display: flex;
-	align-items: center;	
+	align-items: center;
 	border: 2px solid #4D869C;
 }
 
-.navbardiv1_searchinputdiv{
+.navbardiv1_searchinputdiv {
 	width: 88%;
 	height: 100%;
 	display: inline-block;
 	border-radius: 15%;
 }
 
-.navbardiv1_searchinputdivinput{
+.navbardiv1_searchinputdivinput {
 	width: 100%;
 	height: 100%;
 	border: none;
 	padding: 0% 1.5% 0% 3%;
 }
 
-.navbardiv1_searchinputdivinput:focus{
+.navbardiv1_searchinputdivinput:focus {
 	outline: none;
 	border: none;
 }
 
-.navbardiv1_searchicon{
+.navbardiv1_searchicon {
 	width: 12%;
 	height: 100%;
 	display: inline-flex;
@@ -571,10 +566,10 @@ body{
 	border-left: 1px solid black;
 	/*background-image: url("../images/search_icon.png");
 	background-repeat: no-repeat;
-	background-size: 70% 70%;	*/	
+	background-size: 70% 70%;	*/
 }
 
-.navbardiv1_searchiconimage{
+.navbardiv1_searchiconimage {
 	width: 80%;
 	height: 80%;
 	background-image: url("../images/search_icon.png");
@@ -582,7 +577,7 @@ body{
 	background-size: 100% 100%;
 }
 
-.navbardiv2{
+.navbardiv2 {
 	width: 50%;
 	height: 100%;
 	/*background-color: white;*/
@@ -592,67 +587,67 @@ body{
 	justify-content: flex-end;
 }
 
-.navbardiv2_total{
+.navbardiv2_total {
 	width: fit-content;
-	height: 50%;	
+	height: 50%;
 	display: flex;
 	align-items: center;
 }
 
-#navbardiv2_totalp{	
-	font-size: 100%;	
+#navbardiv2_totalp {
+	font-size: 100%;
 	font-weight: 600;
-	color: #F8F4E1;	
+	color: #F8F4E1;
 	background: none;
 	display: inline;
-	margin-left: 5px; 	
+	margin-left: 5px;
 	font-family: sans-serif;
 }
 
-.navbardiv2_new{
-    background-color: green;
-    width: fit-content;
-    height: fit-content;
-    padding: 4px 8px;    
-    color: white;    
-    box-shadow: 2px 2px 2px black;
-    align-self: center;        
-    cursor: pointer;
+.navbardiv2_new {
+	background-color: green;
+	width: fit-content;
+	height: fit-content;
+	padding: 4px 8px;
+	color: white;
+	box-shadow: 2px 2px 2px black;
+	align-self: center;
+	cursor: pointer;
 }
 
-.navbardiv2_new:hover{
-    transform: translate(1px, 2px);
-    background-color: lightgreen;
-    color: crimson;
+.navbardiv2_new:hover {
+	transform: translate(1px, 2px);
+	background-color: lightgreen;
+	color: crimson;
 }
 
-.navbardiv2_new_p{
-    margin: 0%;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 700;
+.navbardiv2_new_p {
+	margin: 0%;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-weight: 700;
 }
 
-.navbardiv2_profile{
+.navbardiv2_profile {
 	width: 8%;
 	height: 80%;
 	border: 2px solid #4D869C;
-	border-radius: 50%;	
+	border-radius: 50%;
 	background-color: white;
 	background-image: url("../images/man.png");
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 }
 
-.navbardiv2_profiletoolstrip{
+.navbardiv2_profiletoolstrip {
 	width: fit-content;
 	height: fit-content;
 	padding: 5px;
 	border: 1.5px solid #4D869C;
 	background-color: #7AB2B2;
-	display: none;	
+	display: none;
 }
 
-.navbardiv2_profile:hover + .navbardiv2_profiletoolstrip{
+.navbardiv2_profile:hover+.navbardiv2_profiletoolstrip {
 	display: block;
 	position: absolute;
 	top: 8.5%;
@@ -660,60 +655,107 @@ body{
 }
 
 /*-------------------------------------------- Operationsdiv ---------------------------------------------------*/
-.operationsdiv{
+.operationsdiv {
 	width: 132px;
 	height: 35px;
 	display: flex !important;
-	border : none;
+	border: none;
 	position: relative;
 	justify-self: flex-end;
-	overflow: visible;	
+	overflow: visible;
 	background: white;
 	border-radius: 5%;
-	padding: 2px;		
+	padding: 2px;
 }
 
-.operationsdiv:after{
+.operationsdiv:after {
 	position: absolute;
 	width: 15px;
-	height: 15px;	
+	height: 15px;
 	top: 30%;
 	left: -5%;
 	transform: rotate(45deg);
-	content:"";
-	background: linear-gradient(45deg, white, white);	
+	content: "";
+	background: linear-gradient(45deg, white, white);
 	border-top: none;
-	border-right: none;		
+	border-right: none;
 }
 
-.operationsdivimage{
+.operationsdivimage {
 	width: 44px;
-	height: 100%;	
+	height: 100%;
 	cursor: pointer;
 }
 
-.operationsdivhr{
+.operationsdivhr {
 	border: 1px inset lightgray;
-	border-radius: 5%;	
+	border-radius: 5%;
 	margin: 0px 3px;
 }
 
-
-#infologo{	
-	background: url("../images/info-button.png");	
+#infologo {
+	background: url("../images/info-button.png");
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	z-index: 1;
 }
 
-#editlogo{	
+#editlogo {
 	background: url("../images/edit.png");
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 }
 
-#deletelogo{	
-	background: url("../images/delete.png");	
+#deletelogo {
+	background: url("../images/delete.png");
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
+}
+
+/*----------------------------------------- contactinfo -----------------------------------------------------------------------------*/
+.contactinfobody{
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;	
+}
+
+.contactinfodiv {
+	width: 60%;
+	height: 90%;
+	/*box-shadow: 1px 7px 10px -1px lightgray;*/
+	clip-path: xywh(0 0 100% 100% round 15% 0);
+	background : lightgray;
+}
+
+.contactinfodivheader {
+	width: 100%;
+	height: 25%;
+	display: flex;
+	align-items: center;	
+}
+
+.contactinfodivheaderimg {
+	width: 25%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.contactinfodivheaderimg img {
+	width: 50%;
+	clip-path: circle(48%);
+}
+
+.contactinfodivheaderinfo {
+	flex-grow: 1;
+	height: 100%;
+	text-align: right;
+}
+
+.contactinfodivbody {
+	width: 100%;
+	height: 80%;
+	display: flex;	
 }

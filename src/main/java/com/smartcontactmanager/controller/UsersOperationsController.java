@@ -32,11 +32,8 @@ public class UsersOperationsController {
 	}
 	
 	@DeleteMapping("/delete")
-	public String deletecontact(@RequestParam String id) {
-		System.out.println("id = =" + id);
-		
-		contactservices.deleteContact(Long.valueOf(id));
-		
-		return "user";
+	public String deletecontact(@RequestParam String id) {		
+		contactservices.deleteContact(Long.valueOf(id));		
+		return "redirect:/contacts";
 	}
 }

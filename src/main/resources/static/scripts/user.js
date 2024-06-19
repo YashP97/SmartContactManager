@@ -7,20 +7,24 @@
 //$(".usernew").on("click", function(){
 //alert("hello");
 //});
-var id = "";
+
+
 $(".navbardiv2_new").click(function() {
-	$(".usernewdiv").addClass("userclicknewdiv");
+	//$(".usernewdiv").addClass("userclicknewdiv");	
+	$(".usernewdiv")[0].style.display = "flex";
 });
 
 //-> Closing the div
 $(".usernewdivclose").click(function() {
-	$(".usernewdiv").removeClass("userclicknewdiv");
+	//$(".usernewdiv").removeClass("userclicknewdiv");
+	$(".usernewdiv")[0].style.display = "none";	
 	document.getElementById("usernewdivformform").reset();
 });
 
 //End here
 
 //Highlighting table row on selected
+var id = "";
 document.addEventListener('DOMContentLoaded', () => {
 	const table = document.getElementById('usertable');
 
@@ -49,8 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	});
 });
-
-//End Here
+//Highlighting code ends
 
 //Displaying div for editing info etc on users page
 $(".usercontainertabletbodytr").mouseenter(function() {
@@ -63,6 +66,7 @@ $(".usercontainertabletbodytr").mouseout(function() {
 });
 
 $("#infologo").click(function() {
+	//if(id.toString)
 	window.location.href = "./contact/info?id=" + id;
 });
 
@@ -74,8 +78,10 @@ $("#deletelogo").click(function() {
 fetch('./contact/delete?id=' + id, {
   method: 'DELETE',    
 }).then(response => {
+	location.reload();
 	console.log("response = " + response.text);
 }).then(error => {
+	location.reload();
 	console.log("error = " + error);
 })
 	
