@@ -732,23 +732,55 @@ body {
 	width: 100%;
 	height: 25%;
 	display: flex;
-	align-items: center;	
+	align-items: center;
+	/*margin: auto;	*/
 }
 
 .contactinfodivheaderimg {
-	width: 25%;
+	width: 25%;	
 	height: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	position : relative;
+	padding: 5px;
 }
 
 .contactinfodivheaderimg img {
-	width: 50%;
-	clip-path: circle(48%);
+	width: 50%;	
+	border-radius: 50%;
+	/*clip-path: circle(48%);*/
+	border: 1px solid green;
+}
+
+.contactinfodivheaderimg div{
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	top: 60%;
+	left: 65%;
+	border: 1px solid green;
+	background-color: lightgray;
+	border-radius: 50%;
+	padding: 3px;	
+}
+
+.contactinfodivheaderimg div img{
+	width: 100%;
+	border: none;
+	border-radius: 100%;
+}
+
+.contactinfodiv hr{
+	width: 95%;
+	border: 2px solid gray;
+	margin: auto; 
 }
 
 .contactinfodivheaderinfo {
+	display: flex;
+    align-items: center;
+    justify-content: center;
 	flex-grow: 1;
 	height: 100%;
 	text-align: right;
@@ -756,6 +788,37 @@ body {
 
 .contactinfodivbody {
 	width: 100%;
-	height: 80%;
+	height: max-content;
+	min-height: 70%;
 	display: flex;	
+	align-items: center;
+    justify-content: center;
+}
+
+.contactinfodivbody div{
+	width: 90%;	
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contactinfodivbody table input{
+	width: 70%;
+    height: 44px;
+    border: none;
+    background: none;
+    font-size: 3vh;  
+}
+
+.contactinfodivbody table label{
+	display: block;
+}
+
+.contactinfodivbody table img{
+	width: 9%;
+}
+
+.contactinfodivbody table td:nth-child(even){
+	text-align: right;
 }

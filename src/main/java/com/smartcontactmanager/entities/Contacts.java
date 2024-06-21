@@ -23,6 +23,12 @@ public class Contacts {
 	private String occupation;
 	@Column(name="ld_mobile", unique=true)
 	private String mobile;
+	@Column(name="ld_email", unique=true)
+	private String email;
+	@Column(name="ld_website", unique=true)
+	private String website;
+	@Column(name="ld_jobtitle")
+	private String jobtitle;
 	@ManyToOne
 	private Users user;
 	
@@ -44,6 +50,19 @@ public class Contacts {
 		this.address = address;
 		this.occupation = occupation;
 		this.mobile = mobile;
+		this.user = user;
+	}
+
+	public Contacts(String name, String address, String occupation, String mobile, String email,
+			String website, String jobtitle, Users user) {
+		super();		
+		this.name = name;
+		this.address = address;
+		this.occupation = occupation;
+		this.mobile = mobile;
+		this.email = email;
+		this.website = website;
+		this.jobtitle = jobtitle;
 		this.user = user;
 	}
 
@@ -93,6 +112,30 @@ public class Contacts {
 
 	public void setUser(Users user) {
 		this.user = user;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getWebsite() {
+		return website;
+	}
+
+	public void setWebsite(String website) {
+		this.website = website;
+	}
+
+	public String getJobtitle() {
+		return jobtitle;
+	}
+
+	public void setJobtitle(String jobtitle) {
+		this.jobtitle = jobtitle;
 	}
 
 	@Override

@@ -1,7 +1,6 @@
 package com.smartcontactmanager.services;
 
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,6 +15,12 @@ public class ContactsServices {
 	@Autowired
 	public ContactsServices(ContactsRepository contactsrepo) {
 		this.contactsrepo = contactsrepo;
+	}
+	
+	@SuppressWarnings("deprecation")
+	public Contacts getContactbyId(long id) {
+		Contacts contact = contactsrepo.getById(id);
+		return contact;
 	}
 	
 	public List<Contacts> getAllContacts(){

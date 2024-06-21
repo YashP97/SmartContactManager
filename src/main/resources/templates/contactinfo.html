@@ -3,21 +3,73 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>User Info</title>
-<link rel="stylesheet"  th:href="@{/style/style.css}">
+<link rel="stylesheet" th:href="@{/style/style.css}">
 </head>
 <body class="contactinfobody">
 	<div class="contactinfodiv">
-        <div class="contactinfodivheader">
-            <div class="contactinfodivheaderimg">
-                <img src="../images/employee.png" alt="Not Found">
-            </div>
-            <div class="contactinfodivheaderinfo">
-                <p>Address</p>
-            </div>
-        </div>
-        <div class="contactinfodivbody">
-            
-        </div>
-    </div>
+		<div class="contactinfodivheader">
+			<div class="contactinfodivheaderimg">
+				<img src="../images/employee.png" alt="Not Found">
+				<div>
+					<img src="../images/copy-image.svg" alt="Not Found">
+				</div>
+			</div>
+			<div class="contactinfodivheaderinfo">
+				<button>Edit Status</button>
+			</div>
+		</div>
+		<hr>
+		<div class="contactinfodivbody">
+			<div>
+				<table>
+					<tr>
+						<td><label>Name</label> <input
+							th:value="${contactinfo.name}" type="text"></td>
+						<td><img src="../images/copy-image.svg"></td>
+					</tr>
+					<tr>
+						<td><label>Occupation</label> <input
+							th:value="${contactinfo.occupation}" type="text"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><label>Job Title</label> <input
+							th:value="${contactinfo.jobtitle}" type="text"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><label>Mobile</label> <input
+							th:value="${contactinfo.mobile}" type="text"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><label>Address</label> <input
+							th:value="${contactinfo.address}" type="text"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><label>Email</label> <input
+							th:value="${contactinfo.email}" type="text"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><label>Website</label> <input
+							th:value="${contactinfo.website}" type="text"></td>
+						<td></td>
+					</tr>
+				</table>
+			</div>
+			<!-- 
+            <div>
+            	<input th:value="${contactinfo.name}" type="text"> 
+            	<input th:value="${contactinfo.occupation}" type="text">
+            	<input th:value="${contactinfo.jobtitle}" type="text">
+            	<input th:value="${contactinfo.mobile}" type="text">
+            	<input th:value="${contactinfo.address}" type="text">
+            	<input th:value="${contactinfo.email}" type="text">
+            	<input th:value="${contactinfo.website}" type="text">               
+            </div>-->
+		</div>
+	</div>
 </body>
 </html>
