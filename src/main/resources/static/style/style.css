@@ -725,7 +725,21 @@ body {
 	height: 90%;
 	/*box-shadow: 1px 7px 10px -1px lightgray;*/
 	clip-path: xywh(0 0 100% 100% round 15% 0);
-	background : lightgray;
+	background : #FFF5E1;
+	overflow: auto;
+}
+
+.contactinfodiv::-webkit-scrollbar {
+  width: 5px;  
+}
+/*
+.contactinfodiv::-webkit-scrollbar-track {
+  background: orange;        
+}*/
+
+.contactinfodiv::-webkit-scrollbar-thumb {
+  background-color: #538392;
+  border-radius: 20px;  
 }
 
 .contactinfodivheader {
@@ -792,7 +806,7 @@ body {
 	min-height: 70%;
 	display: flex;	
 	align-items: center;
-    justify-content: center;
+    justify-content: center;    
 }
 
 .contactinfodivbody div{
@@ -803,22 +817,31 @@ body {
     justify-content: center;
 }
 
+.contactinfodivbody table{
+	width : 90%;
+	border-collapse: collapse;
+}
+
+.contactinfodivbody table label{
+	display: block;
+	flex-grow: 1;	
+}
+
+.contactinfodivbody table img{
+	width: 2%;
+	cursor: pointer;
+}
+
 .contactinfodivbody table input{
 	width: 70%;
     height: 44px;
     border: none;
     background: none;
-    font-size: 3vh;  
+    font-size: 1.5rem;  
+    color: #538392;
+    margin-bottom : 2%;
 }
 
-.contactinfodivbody table label{
-	display: block;
-}
-
-.contactinfodivbody table img{
-	width: 9%;
-}
-
-.contactinfodivbody table td:nth-child(even){
-	text-align: right;
+.contactinfodivbody table td{
+	display: flex;
 }
