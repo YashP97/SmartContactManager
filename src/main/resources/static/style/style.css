@@ -840,6 +840,11 @@ body {
     font-size: 1.5rem;  
     color: #538392;
     margin-bottom : 2%;
+    outline: none;    
+}
+
+.contactinfodivbodyinput:focus{
+	border-bottom: 1px solid black;
 }
 
 .contactinfodivbody table td{
