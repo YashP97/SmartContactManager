@@ -19,12 +19,16 @@ function saving(e){
 		var value = document.getElementById("input" + e).value;
 		
 		fetch('./edit?text='+value+'&key='+e, {
-			method: 'POST',
+			method: 'PUT',
 		}).then(response => {			
-			location.reload();
+			location.reload();			
 		}).then(error => {
 			console.log("error = " + error);
 		});
-	}
-	
+	}	
 }
+
+$("#editstatusbutton").click(function(){
+	document.getElementById('editstatusdiv').style.display="flex";
+	document.getElementById('editstatusbutton').style.display="none";
+});

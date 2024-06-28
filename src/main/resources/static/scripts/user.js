@@ -65,13 +65,8 @@ $(".usercontainertabletbodytr").mouseout(function() {
 	$(".operationsdiv")[0].style.display = "none";
 });
 
-$("#infologo").click(function() {
-	//if(id.toString)
+$("#infologo").click(function() {	
 	window.location.href = "./contact/info?id=" + id;
-});
-
-$("#editlogo").click(function() {
-	window.location.href = "./contact/edit?id=" + id;
 });
 
 $("#deletelogo").click(function() {

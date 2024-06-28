@@ -5,7 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -32,8 +32,8 @@ public class UsersOperationsController {
 		return "contactinfo";
 	}
 
-	@PostMapping("/edit")
-	public void editingcontacts(@RequestParam String text, @RequestParam String key) {
+	@PutMapping("/edit")
+	public String editingcontacts(@RequestParam String text, @RequestParam String key) {
 		System.out.println("text = " + text + " key = " + key);
 
 		Contacts contact = contactservices.getContactbyId(id);
@@ -63,6 +63,7 @@ public class UsersOperationsController {
 		}
 		
 		contactservices.saveContact(contact);
+		return "redirect:/contact";
 	}
 
 	@DeleteMapping("/delete")

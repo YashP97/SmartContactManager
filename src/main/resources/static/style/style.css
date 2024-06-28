@@ -30,9 +30,7 @@ body {
 
 /*------------------------------------------welcome-------------------------------------------------*/
 .welcomebody {
-	/*width: 100vw;
-	height: 100vh;	
-	background-color: #86DFBF;*/
+	/*background-color: #86DFBF;*/
 	background: url("../images/welcome_page.jpg");
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
@@ -81,9 +79,7 @@ body {
 }
 
 /*------------------------------------------------------Login----------------------------------------------------------------------*/
-.loginbody {
-	/*width: 100%;
-	height: 100%;	*/
+.loginbody {	
 	background-color: var(--maincolor);
 	display: flex;
 	justify-content: center;
@@ -194,9 +190,7 @@ body {
 }
 
 /*------------------------------------------------Register-----------------------------------------------*/
-.registerbody {
-	/*width: 100vw;
-	height: 100vh;	*/
+.registerbody {	
 	background-color: var(--maincolor);
 	display: flex;
 	justify-content: center;
@@ -297,9 +291,7 @@ body {
 }
 
 /*--------------------------------------------User--------------------------------------------------*/
-.userBody {
-	/*width: 100%;
-    height: 100vh;*/
+.userBody {	
 	background-color: var(--maincolor);
 	overflow: hidden;
 	display: grid;
@@ -309,59 +301,6 @@ body {
 	margin: 0%;
 }
 
-/*.usernavbar{
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    color: bisque;
-    display: flex;    
-    align-items: center;    
-}
-
-.cont{
-    display: inline-block;
-    position: relative;
-}
-
-.h4{
-    margin-left: auto;
-    margin-right: 2%;
-}
-
-.navbarimg{
-	width: 30px;
-	height: 30px;
-	background: url("../images/projectLogo.png");
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
-}
-
-
-.usernew{
-    background-color: green;
-    width: fit-content;
-    height: fit-content;
-    padding: 4px 8px;    
-    color: white;  
-    border-radius: 10%;
-    box-shadow: 2px 2px 2px black;
-    align-self: center;
-    justify-self: end;
-    margin-right: 3%;
-    cursor: pointer;
-}
-
-.usernew:hover{
-    transform: translate(1px, 2px);
-    background-color: lightgreen;
-    color: crimson;
-}
-
-.newp{
-    margin: 0%;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 700;
-}*/
 .usercontainer {
 	width: 95%;
 	height: max-content;
@@ -490,9 +429,7 @@ body {
 	gap: 25%;
 }
 
-.navbardiv1_logo {
-	/*width: 10%;
-	height: 90%;*/
+.navbardiv1_logo {	
 	width: 5vw;
 	height: 90%;
 	background: url("../images/projectLogo.png");
@@ -506,12 +443,7 @@ body {
 	padding: 3px;
 	border: 1.5px solid #4D869C;
 	background-color: #7AB2B2;
-	display: none;
-	/*align-items: center;
-	justify-content: center;
-	position: absolute;
-	top: 8%;
-	left: 5%;	*/
+	display: none;	
 }
 
 .navbardiv1_logo:hover+.navbardiv1_logotoolstrip {
@@ -563,10 +495,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	background-color: lightgray;
-	border-left: 1px solid black;
-	/*background-image: url("../images/search_icon.png");
-	background-repeat: no-repeat;
-	background-size: 70% 70%;	*/
+	border-left: 1px solid black;	
 }
 
 .navbardiv1_searchiconimage {
@@ -579,8 +508,7 @@ body {
 
 .navbardiv2 {
 	width: 50%;
-	height: 100%;
-	/*background-color: white;*/
+	height: 100%;	
 	display: flex;
 	align-items: center;
 	gap: 10%;
@@ -849,4 +777,43 @@ body {
 
 .contactinfodivbody table td{
 	display: flex;
+}
+
+#editstatusbutton{
+	height: 30px;
+	width: 10vw;
+	font-size: 1.1vw;
+	font-family: sans-serif;
+	font-weight: 600;
+	background-color: green;	
+	color: white;
+	padding: 4px 8px;	
+	box-shadow: 1px 1px 4px lightgrey;	
+	cursor: pointer;
+	border: none;
+    border-radius: 3px;    
+    text-align: center;
+}
+
+#editstatusdiv{
+	width: 60%;
+	height: 100%;
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	gap: 5px;
+}
+
+#editstatusdiv textarea{
+	height: 50%;
+	border-radius: 3px;
+	padding : 3px;	
+}
+
+#editstatusdiv textarea:focus{	
+	outline: none;	
+}
+
+#editstatusdiv button{
+	width: 100%;
 }
