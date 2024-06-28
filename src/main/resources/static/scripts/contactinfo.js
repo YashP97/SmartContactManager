@@ -11,3 +11,20 @@ function editable(e){
 	document.getElementById("input" + e).focus();
 	document.getElementById("input" + e).select();	
 }
+
+function saving(e){		
+	var k = window.event.key;	
+	
+	if(k === "Enter"){
+		var value = document.getElementById("input" + e).value;
+		
+		fetch('./edit?text='+value+'&key='+e, {
+			method: 'POST',
+		}).then(response => {			
+			location.reload();
+		}).then(error => {
+			console.log("error = " + error);
+		});
+	}
+	
+}
