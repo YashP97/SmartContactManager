@@ -29,6 +29,8 @@ public class Contacts {
 	private String website;
 	@Column(name="ld_jobtitle")
 	private String jobtitle;
+	@Column(name="ld_status")
+	private String status;
 	@ManyToOne
 	private Users user;
 	
@@ -54,7 +56,7 @@ public class Contacts {
 	}
 
 	public Contacts(String name, String address, String occupation, String mobile, String email,
-			String website, String jobtitle, Users user) {
+			String website, String jobtitle, String status, Users user) {
 		super();		
 		this.name = name;
 		this.address = address;
@@ -64,6 +66,7 @@ public class Contacts {
 		this.website = website;
 		this.jobtitle = jobtitle;
 		this.user = user;
+		this.status = status;
 	}
 
 	public long getId() {
@@ -138,9 +141,18 @@ public class Contacts {
 		this.jobtitle = jobtitle;
 	}
 
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
 	@Override
 	public String toString() {
 		return "Contacts [id=" + id + ", name=" + name + ", address=" + address + ", occupation=" + occupation
-				+ ", mobile=" + mobile + ", user=" + user + "]";
-	}
+				+ ", mobile=" + mobile + ", email=" + email + ", website=" + website + ", jobtitle=" + jobtitle
+				+ ", status=" + status + ", user=" + user + "]";
+	}	
 }

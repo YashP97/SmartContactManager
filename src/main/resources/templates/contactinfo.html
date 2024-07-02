@@ -15,11 +15,22 @@
 					<img src="../images/copy-image.svg" alt="Not Found">
 				</div>
 			</div>
+			<!--  <div class="contactinfodivheaderinfo">				
+				<button id="editstatusbutton">Edit Status</button>
+				<div id="editstatusdiv">					
+						<textarea placeholder="Status" onfocus="this.placeholder = ''"></textarea>
+						<a th:href="@{/contact/status}"><button id="editstatusbutton">Save</button></a>				
+				</div>
+			</div>-->
 			<div class="contactinfodivheaderinfo">
+				<input style="display:none;" type="text" th:value="${contactinfo.status}"	disabled/>			
 				<button id="editstatusbutton">Edit Status</button>
 				<div id="editstatusdiv">
-					<textarea placeholder="Status" onfocus="this.placeholder = ''"></textarea>
-					<button id="editstatusbutton">Save</button>
+					<!--  <form th:action="@{/contact/status}" method="post" th:object="${contactinfo}">-->					
+						<textarea th:value="${contactinfo.status}" placeholder="Status" onfocus="this.placeholder = ''" id="editstatusdivinput"></textarea>
+						<!--  <a th:href="@{/contact/status}"><button id="editstatusbutton">Save</button></a>-->	
+						<button id="editstatusbutton" class="editstatusbuttonsave" type="submit" onclick="download()">Save</button>
+					<!--  </form>	-->			
 				</div>
 			</div>
 		</div>

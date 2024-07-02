@@ -32,3 +32,15 @@ $("#editstatusbutton").click(function(){
 	document.getElementById('editstatusdiv').style.display="flex";
 	document.getElementById('editstatusbutton').style.display="none";
 });
+
+function download(){
+	var value = document.getElementById('editstatusdivinput').value;
+	
+	fetch('./status?status='+value,{
+		method: 'POST'
+	}).then(response => {
+		console.log("response = " + response.text);
+	}).then(error => {
+		console.log("error = " + error);
+	});
+}

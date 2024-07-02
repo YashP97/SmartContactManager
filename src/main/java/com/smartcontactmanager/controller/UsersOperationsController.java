@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -29,7 +30,13 @@ public class UsersOperationsController {
 		this.id = Long.parseLong(id);
 		Contacts contact = contactservices.getContactbyId(Long.parseLong(id));
 		model.addAttribute("contactinfo", contact);
+//		if(contact.getStatus() == null || contact.getStatus().trim().equals("")) {
+//			return "redirect:/contactinfo?empty";
+//		}else {
+//			return "redirect:/contactinfo?available";
+//		}
 		return "contactinfo";
+		
 	}
 
 	@PutMapping("/edit")
@@ -70,5 +77,14 @@ public class UsersOperationsController {
 	public String deletecontact(@RequestParam String id) {
 		contactservices.deleteContact(Long.valueOf(id));
 		return "redirect:/contacts";
+	}
+	
+	@PostMapping("/status")
+	public String saveStatus(@RequestParam String status) {
+		System.out.println("status = " + status);
+		Contacts contact = contactservices.getContactbyId(id);
+		contact.setStatus(status);
+		contactservices.saveContact(contact);
+		return "redirect:/contact/info";
 	}
 }
