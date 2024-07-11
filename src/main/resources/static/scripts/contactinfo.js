@@ -31,6 +31,7 @@ function saving(e){
 $("#editstatusbutton").click(function(){
 	document.getElementById('editstatusdiv').style.display="flex";
 	document.getElementById('editstatusbutton').style.display="none";
+	document.getElementById('statuscontent').style.display="none";
 });
 
 function download(){
@@ -39,6 +40,8 @@ function download(){
 	fetch('./status?status='+value,{
 		method: 'POST'
 	}).then(response => {
+		document.getElementById('editstatusdiv').style.display="none";
+		document.getElementById("statuscontent").style.display="block";
 		console.log("response = " + response.text);
 	}).then(error => {
 		console.log("error = " + error);

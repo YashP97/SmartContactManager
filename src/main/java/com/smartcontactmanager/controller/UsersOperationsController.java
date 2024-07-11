@@ -26,23 +26,21 @@ public class UsersOperationsController {
 	}
 
 	@GetMapping("/info")
-	public String getContactInfo(@RequestParam String id, Model model) {
+	public String getContactInfo(@RequestParam String id, Model model) {		
+		if(id == null || id.trim().equals("")) {			
+			return "user";
+		}		
+		
 		this.id = Long.parseLong(id);
 		Contacts contact = contactservices.getContactbyId(Long.parseLong(id));
 		model.addAttribute("contactinfo", contact);
-//		if(contact.getStatus() == null || contact.getStatus().trim().equals("")) {
-//			return "redirect:/contactinfo?empty";
-//		}else {
-//			return "redirect:/contactinfo?available";
-//		}
+
 		return "contactinfo";
 		
 	}
 
 	@PutMapping("/edit")
-	public String editingcontacts(@RequestParam String text, @RequestParam String key) {
-		System.out.println("text = " + text + " key = " + key);
-
+	public String editingcontacts(@RequestParam String text, @RequestParam String key) {		
 		Contacts contact = contactservices.getContactbyId(id);
 
 		switch (key) {
@@ -81,7 +79,6 @@ public class UsersOperationsController {
 	
 	@PostMapping("/status")
 	public String saveStatus(@RequestParam String status) {
-		System.out.println("status = " + status);
 		Contacts contact = contactservices.getContactbyId(id);
 		contact.setStatus(status);
 		contactservices.saveContact(contact);

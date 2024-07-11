@@ -66,7 +66,9 @@ $(".usercontainertabletbodytr").mouseout(function() {
 });
 
 $("#infologo").click(function() {	
-	window.location.href = "./contact/info?id=" + id;
+	if(id != ""){		
+		window.location.href = "./contact/info?id=" + id;
+	}			
 });
 
 $("#deletelogo").click(function() {

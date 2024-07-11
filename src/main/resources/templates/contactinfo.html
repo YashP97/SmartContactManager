@@ -4,7 +4,8 @@
 <meta charset="ISO-8859-1">
 <title>User Info</title>
 <link rel="stylesheet" th:href="@{/style/style.css}">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body class="contactinfobody">
 	<div class="contactinfodiv">
@@ -15,22 +16,15 @@
 					<img src="../images/copy-image.svg" alt="Not Found">
 				</div>
 			</div>
-			<!--  <div class="contactinfodivheaderinfo">				
-				<button id="editstatusbutton">Edit Status</button>
-				<div id="editstatusdiv">					
-						<textarea placeholder="Status" onfocus="this.placeholder = ''"></textarea>
-						<a th:href="@{/contact/status}"><button id="editstatusbutton">Save</button></a>				
-				</div>
-			</div>-->
 			<div class="contactinfodivheaderinfo">
-				<input style="display:none;" type="text" th:value="${contactinfo.status}"	disabled/>			
+				<p id="statuscontent"
+					th:text="${contactinfo.status}"></p>
 				<button id="editstatusbutton">Edit Status</button>
 				<div id="editstatusdiv">
-					<!--  <form th:action="@{/contact/status}" method="post" th:object="${contactinfo}">-->					
-						<textarea th:value="${contactinfo.status}" placeholder="Status" onfocus="this.placeholder = ''" id="editstatusdivinput"></textarea>
-						<!--  <a th:href="@{/contact/status}"><button id="editstatusbutton">Save</button></a>-->	
-						<button id="editstatusbutton" class="editstatusbuttonsave" type="submit" onclick="download()">Save</button>
-					<!--  </form>	-->			
+					<textarea th:value="${contactinfo.status}" placeholder="Status"
+						onfocus="this.placeholder = ''" id="editstatusdivinput"></textarea>
+					<button id="editstatusbutton" class="editstatusbuttonsave"
+						type="submit" onclick="download()">Save</button>
 				</div>
 			</div>
 		</div>
@@ -39,62 +33,72 @@
 			<div>
 				<table>
 					<tr>
-						<td>
-							<label>Name</label> 
-							<img id="img1" src="../images/pen-solid.svg" onclick="editable(1)">
-						</td>						
-					</tr>
-					<tr>						
-						<td><input id="input1" class="contactinfodivbodyinput" th:value="${contactinfo.name}" type="text" onkeypress="saving(1)" disabled></td>
+						<td><label>Name</label> <img id="img1"
+							src="../images/pen-solid.svg" onclick="editable(1)"></td>
 					</tr>
 					<tr>
-						<td>
-							<label>Occupation</label>
-							<img id="img2" src="../images/pen-solid.svg" onclick="editable(2)">
-						</td>						
+						<td><input id="input1" class="contactinfodivbodyinput"
+							th:value="${contactinfo.name}" type="text" onkeypress="saving(1)"
+							disabled></td>
 					</tr>
 					<tr>
-						<td><input id="input2" class="contactinfodivbodyinput" th:value="${contactinfo.occupation}" type="text" onkeypress="saving(2)" disabled></td>						
+						<td><label>Occupation</label> <img id="img2"
+							src="../images/pen-solid.svg" onclick="editable(2)"></td>
 					</tr>
 					<tr>
-						<td><label>Job Title</label><img id="img3" src="../images/pen-solid.svg" onclick="editable(3)"></td>						
+						<td><input id="input2" class="contactinfodivbodyinput"
+							th:value="${contactinfo.occupation}" type="text"
+							onkeypress="saving(2)" disabled></td>
+					</tr>
+					<tr>
+						<td><label>Job Title</label><img id="img3"
+							src="../images/pen-solid.svg" onclick="editable(3)"></td>
 					</tr>
 					<tr>
 						<td><input id="input3" class="contactinfodivbodyinput"
-							th:value="${contactinfo.jobtitle}" type="text" onkeypress="saving(3)" disabled></td>						
+							th:value="${contactinfo.jobtitle}" type="text"
+							onkeypress="saving(3)" disabled></td>
 					</tr>
 					<tr>
-						<td><label>Mobile</label><img id="img4" src="../images/pen-solid.svg" onclick="editable(4)"></td>						
+						<td><label>Mobile</label><img id="img4"
+							src="../images/pen-solid.svg" onclick="editable(4)"></td>
 					</tr>
 					<tr>
 						<td><input id="input4" class="contactinfodivbodyinput"
-							th:value="${contactinfo.mobile}" type="text" onkeypress="saving(4)" disabled></td>						
+							th:value="${contactinfo.mobile}" type="text"
+							onkeypress="saving(4)" disabled></td>
 					</tr>
 					<tr>
-						<td><label>Address</label><img id="img5" src="../images/pen-solid.svg" onclick="editable(5)"></td>						
+						<td><label>Address</label><img id="img5"
+							src="../images/pen-solid.svg" onclick="editable(5)"></td>
 					</tr>
 					<tr>
 						<td><input id="input5" class="contactinfodivbodyinput"
-							th:value="${contactinfo.address}" type="text" onkeypress="saving(5)" disabled></td>						
+							th:value="${contactinfo.address}" type="text"
+							onkeypress="saving(5)" disabled></td>
 					</tr>
 					<tr>
-						<td><label>Email</label><img id="img6" src="../images/pen-solid.svg" onclick="editable(6)"></td>
+						<td><label>Email</label><img id="img6"
+							src="../images/pen-solid.svg" onclick="editable(6)"></td>
 						<td></td>
 					</tr>
 					<tr>
 						<td><input id="input6" class="contactinfodivbodyinput"
-							th:value="${contactinfo.email}" type="text" onkeypress="saving(6)" disabled></td>						
+							th:value="${contactinfo.email}" type="text"
+							onkeypress="saving(6)" disabled></td>
 					</tr>
 					<tr>
-						<td><label>Website</label><img id="img7" src="../images/pen-solid.svg" onclick="editable(7)"></td>						
+						<td><label>Website</label><img id="img7"
+							src="../images/pen-solid.svg" onclick="editable(7)"></td>
 					</tr>
 					<tr>
 						<td><input id="input7" class="contactinfodivbodyinput"
-							th:value="${contactinfo.website}" type="text" onkeypress="saving(7)" disabled></td>
+							th:value="${contactinfo.website}" type="text"
+							onkeypress="saving(7)" disabled></td>
 						<td></td>
 					</tr>
 				</table>
-			</div>			
+			</div>
 		</div>
 	</div>
 	<script src="/scripts/contactinfo.js"></script>
