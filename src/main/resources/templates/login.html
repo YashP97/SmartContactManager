@@ -10,15 +10,17 @@
 </head>
 <body class="loginbody">	
 	<div class="logincontainer">
-		<h1 class="logincontainerh1">Sign In</h1>
-		<form th:action="@{/users/login}" method="post" class="logincontainerform">
-			<label class="loginelements loginlabel" for="username">Username </label>
-			<input class="loginelements logininput" id="username" placeholder="Username or Email" type="text" name="username">
-			<label class="loginelements loginlabel" for="pass">Password </label>
-			<input class="loginelements logininput" id="pass" placeholder="Input your password" type="password" name="password">
-			<button class="loginbutton" type="submit">Login</button>
-			<button th:replace="fragments/googlesigninbutton :: googlesignin" type="submit"></button>
-		</form>
+		<div class="logincontainerh1div"><h1 class="logincontainerh1" style="font-family: 'Oswald', sans-serif;">Sign In</h1></div>
+		<div class="logincontainerdiv" style="width: 100%; height: 80%;">
+			<form th:action="@{/users/login}" method="post" class="logincontainerform">
+				<label class="loginelements loginlabel" for="username">Username </label>
+				<input class="loginelements logininput" id="username" placeholder="Username or Email" type="text" name="username">
+				<label class="loginelements loginlabel" for="pass">Password </label>
+				<input class="loginelements logininput" id="pass" placeholder="Input your password" type="password" name="password">
+				<button class="loginbutton" type="submit">Login</button>
+				<button th:replace="fragments/googlesigninbutton :: googlesignin" type="submit"></button>
+			</form>
+		</div>
 	</div>
 	<div class="loginfail" th:if="${param.fail}">
 		<p class="loginfailp">User not logged in. Username and Password not match.</p>
